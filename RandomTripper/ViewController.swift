@@ -14,7 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    @IBAction func backfood(segue: UIStoryboardSegue) {}
+    @IBAction func backstation(segue: UIStoryboardSegue) {}
+    @IBAction func backsave(segue: UIStoryboardSegue) {}
 
-
+    
+    
+    
+    
+    
 }
 
