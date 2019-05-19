@@ -20,6 +20,8 @@ class StationViewController: UIViewController {
         
         let num = Int(arc4random_uniform(5))
         nameLabel.text = "\(result[num])へ行ってください！"
+        
+        
         // Do any additional setup after loading the view.
     }
     

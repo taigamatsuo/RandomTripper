@@ -8,106 +8,75 @@
 
 import UIKit
 
-class FirstViewController: PresentationViewController {
+class FirstViewController: UIViewController {
     
+   @IBAction func back(segue: UIStoryboardSegue) {}
     
+    let label = UILabel()
+   
+    let buttoArray: [UIButton] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
+       
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-            self.addBlue()
-        })
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    func addBlue() {
-        let f = FluidViewController()
-        f.view.backgroundColor = UIColor.blue
-        f.constraints.width = 300
-        f.constraints.height = 500
-        f.statusBarStyle = 1
-        f.modalPresentationStyle = .fullScreen
-        self.present(f, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-            self.addYellow()
-            //self.addRed()
-        })
         
-    }
-    
-    func addYellow() {
-        let f = FluidViewController()
-        f.view.backgroundColor = UIColor.yellow
-        f.constraints.width = 300
-        f.constraints.height = 500
-        f.modalPresentationStyle = .overFullScreen
-        self.present(f, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-            self.addGreen()
-        })
-    }
-    
-    func addGreen() {
-        let f = FluidViewController()
-        f.view.backgroundColor = UIColor.green
-        f.constraints.width = 300
-        f.constraints.height = 500
-        f.statusBarStyle = 0
-        f.showsOverlay = true
-        f.modalPresentationStyle = .formSheet
-        self.present(f, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-            self.addRed()
-        })
-    }
-    
-    func addRed() {
-        let f = FluidViewController()
-        f.view.backgroundColor = UIColor.red
-        f.constraints.width = 0
-        f.constraints.height = 300
-        f.constraints.verticalMargin = 20
-        f.constraints.horizontalMargin = 20
-        f.statusBarStyle = 1
-        f.showsOverlay = true
-        f.hasActionableOverlay = true
-        f.modalPresentationStyle = .pageSheet
-        //f.constraints.reference = .attachToSafeArea
-        self.present(f, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-            //self.startDismiss()
-        })
-    }
-    
-    func startDismiss() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-            self.dismiss(animated: true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-                self.dismiss(animated: true)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-                    self.dismiss(animated: true)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-                        self.dismiss(animated: true)
-                    })
-                })
-            })
-        })
+        
+        
+        // ViewControllerの背景色
+        self.view.backgroundColor = UIColor.init(
+            red:0.71, green: 1.0, blue: 0.95, alpha: 1)
+        
+        // スクリーンの横縦幅
+        let screenWidth:CGFloat = self.view.frame.width
+        let screenHeight:CGFloat = self.view.frame.height
+        
+        // ボタンのインスタンス生成
+        let button = UIButton()
+        
+        // ボタンの位置とサイズを設定
+        button.frame = CGRect(x:screenWidth/4, y:screenHeight/2,
+                              width:screenWidth/2, height:50)
+        
+        // ボタンのタイトルを設定
+        button.setTitle("ボタンを押して開始", for:UIControl.State.normal)
+        
+        // タイトルの色
+               button.setTitleColor(UIColor.white, for: .normal)
+        
+        // ボタンのフォントサイズ
+        button.titleLabel?.font =  UIFont.systemFont(ofSize: 36)
+        
+        // 背景色
+        button.backgroundColor = UIColor.init(
+            red:0.9, green: 0.9, blue: 0.9, alpha: 1)
+        
+        // タップされたときのaction
+        // button.addTarget(self,
+        //                action: #selector(ViewController.buttonTapped(sender:)),
+            //          for: .touchUpInside)
+        
+        // Viewにボタンを追加
+        self.view.addSubview(button)
+        
+        
+        // ラベルのサイズを設定
+        label.frame = CGRect(x:screenWidth/4, y:250,
+                             width:screenWidth/2, height:50);
+        
+        // ラベルの文字を設定
+        label.text = "Random Tripper"
+        
+        // 文字を中央にalignする
+        label.textAlignment = NSTextAlignment.center
+        
+        // ラベルのフォントサイズ
+        label.font = UIFont.systemFont(ofSize: 24)
+        
+        // Viewにラベルを追加
+        self.view.addSubview(label)
     }
     
 }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
