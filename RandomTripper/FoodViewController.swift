@@ -10,6 +10,8 @@ import UIKit
 
 class FoodViewController: UIViewController {
 
+    //背景画像
+    @IBOutlet var haikeiimageview: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -23,13 +25,35 @@ class FoodViewController: UIViewController {
     var result:[String] = ["滋賀県　ちゃんぽん亭総本家の近江ちゃんぽん", "大阪府　テッチャン鍋金太郎のちりとり鍋", "京都府　居様（いざま）のおばんざい御膳", "和歌山県　生しらす丼","三重県　すし久の手こね寿司"]
     
     
+    //背景画像を保存する配列
+    var  haikeiArray : [UIImage]!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+       
+        
+        //0-4の間でランダムに数字を表示させる
+        let number = Int.random(in: 0..<4)
+        
+        //背景の画像を4枚追加する
+        haikeiArray = [UIImage(named:"siro.png")!,
+        UIImage(named:"img_main.jpg")!,
+        UIImage(named:"1.jpg")!,
+        UIImage(named:"image12.jpg")!]
+        
+        haikeiimageview.image = haikeiArray[number]
+        
+        
+        
+        
         let num = Int(arc4random_uniform(5))
         nameLabel.text = "\(result[num])"
+        
+        
+        
         
         
         // ViewControllerの背景色
