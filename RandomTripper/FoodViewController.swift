@@ -115,12 +115,48 @@ class FoodViewController: UIViewController {
         
         
         
+        // ボタン4のインスタンス生成
+        let button4 = UIButton()
+        // ボタンの位置とサイズを設定
+        button4.frame = CGRect(x:screenWidth/9, y:screenHeight/2,
+                               width:screenWidth/0.8, height:60)
+        // ボタンのタイトルを設定
+        button4.setTitle("和歌山県　生しらす丼", for:UIControl.State.normal)
+        // タイトルの色
+        button4.setTitleColor(UIColor.white, for: .normal)
+        // ボタンのフォントサイズ
+        button4.titleLabel?.font =  UIFont.systemFont(ofSize: 18)
+        // 背景色
+        button4.backgroundColor = UIColor.init(
+            red:0.9, green: 0.9, blue: 0.9, alpha: 1)
         
         
-        let buttoArray:[UIButton] = [button1,button2,button3]
+        
+        
+        // ボタン5のインスタンス生成
+        let button5 = UIButton()
+        // ボタンの位置とサイズを設定
+        button5.frame = CGRect(x:screenWidth/9, y:screenHeight/2,
+                               width:screenWidth/0.8, height:60)
+        // ボタンのタイトルを設定
+        button5.setTitle("三重県　すし久のてこね寿司", for:UIControl.State.normal)
+        // タイトルの色
+        button5.setTitleColor(UIColor.white, for: .normal)
+        // ボタンのフォントサイズ
+        button5.titleLabel?.font =  UIFont.systemFont(ofSize: 18)
+        // 背景色
+        button5.backgroundColor = UIColor.init(
+            red:0.9, green: 0.9, blue: 0.9, alpha: 1)
+        
+        
+        
+        
+        
+        
+        let buttoArray:[UIButton] = [button1,button2,button3,button4,button5]
         
         //配列から取り出してviewに追加
-        var but = Int.random(in:0..<3)
+        var but = Int.random(in:0..<5)
         view.addSubview(buttoArray[but])
         
         
@@ -129,7 +165,8 @@ class FoodViewController: UIViewController {
         button1.addTarget(self, action: #selector(self.Pushbutton1(sender:)), for: .touchUpInside)
         button2.addTarget(self, action: #selector(self.Pushbutton2(sender:)), for: .touchUpInside)
         button3.addTarget(self, action: #selector(self.Pushbutton3(sender:)), for: .touchUpInside)
-        
+        button4.addTarget(self, action: #selector(self.Pushbutton4(sender:)), for: .touchUpInside)
+        button5.addTarget(self, action: #selector(self.Pushbutton5(sender:)), for: .touchUpInside)
     }
     
     @objc func Pushbutton1(sender: UIButton) {
@@ -153,7 +190,19 @@ class FoodViewController: UIViewController {
         }
     }
     
+    @objc func Pushbutton4(sender: UIButton) {
+        let url = URL(string: "http://www.yuasa-kadoya.com")!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
     
+    @objc func Pushbutton5(sender: UIButton) {
+        let url = URL(string: "https://www.okageyokocho.co.jp/tenpo/sushikyu/")!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
     
     
     
