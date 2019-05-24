@@ -9,12 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBAction func backfood(segue: UIStoryboardSegue) {}
     @IBAction func backstation(segue: UIStoryboardSegue) {}
     @IBAction func backsave(segue: UIStoryboardSegue) {}
     
-    }
+}
     
 
    
