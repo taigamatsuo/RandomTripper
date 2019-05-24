@@ -32,13 +32,13 @@ class FoodViewController: UIViewController {
         
         
         //0-4の間でランダムに数字を表示させる
-        let number = Int.random(in: 0..<4)
+        let number = Int.random(in: 0..<1)
         
         //背景の画像を4枚追加する
-        haikeiArray = [UIImage(named:"siro.png")!,
-                       UIImage(named:"img_main.jpg")!,
-                       UIImage(named:"1.jpg")!,
-                       UIImage(named:"image12.jpg")!]
+        haikeiArray = [UIImage(named:"food.png")!]
+                       //UIImage(named:"img_main.jpg")!,
+                      // UIImage(named:"1.jpg")!,
+                       //UIImage(named:"image12.jpg")!]
         
         haikeiimageview.image = haikeiArray[number]
         
@@ -61,8 +61,8 @@ class FoodViewController: UIViewController {
         // ボタン1のインスタンス生成
         let button1 = UIButton()
         // ボタンの位置とサイズを設定
-        button1.frame = CGRect(x:screenWidth/9, y:screenHeight/2,
-                               width:screenWidth/0.8, height:60)
+        button1.frame = CGRect(x:screenWidth/9, y:screenHeight/3,
+                               width:screenWidth/1.2, height:60)
         // ボタンのタイトルを設定
         button1.setTitle("滋賀県　ちゃんぽん亭総本家の近江ちゃんぽん", for:UIControl.State.normal)
         // タイトルの色
@@ -84,7 +84,7 @@ class FoodViewController: UIViewController {
         let button2 = UIButton()
         // ボタンの位置とサイズを設定
         button2.frame = CGRect(x:screenWidth/9, y:screenHeight/3,
-                               width:screenWidth/0.8, height:60)
+                               width:screenWidth/1.2, height:60)
         // ボタンのタイトルを設定
         button2.setTitle("大阪府　テッチャン鍋金太郎のちりとり鍋", for:UIControl.State.normal)
         // タイトルの色
@@ -101,8 +101,8 @@ class FoodViewController: UIViewController {
         
         let button3 = UIButton()
         // ボタンの位置とサイズを設定
-        button3.frame = CGRect(x:screenWidth/9, y:screenHeight/5,
-                               width:screenWidth/0.8, height:60)
+        button3.frame = CGRect(x:screenWidth/9, y:screenHeight/3,
+                               width:screenWidth/1.2, height:60)
         // ボタンのタイトルを設定
         button3.setTitle("京都府　居様（いざま）のおばんざい御膳", for:UIControl.State.normal)
         // タイトルの色
@@ -118,12 +118,12 @@ class FoodViewController: UIViewController {
         // ボタン4のインスタンス生成
         let button4 = UIButton()
         // ボタンの位置とサイズを設定
-        button4.frame = CGRect(x:screenWidth/9, y:screenHeight/2,
-                               width:screenWidth/0.8, height:60)
+        button4.frame = CGRect(x:screenWidth/9, y:screenHeight/3,
+                               width:screenWidth/1.2, height:60)
         // ボタンのタイトルを設定
         button4.setTitle("和歌山県　生しらす丼", for:UIControl.State.normal)
         // タイトルの色
-        button4.setTitleColor(UIColor.white, for: .normal)
+        button4.setTitleColor(UIColor.black, for: .normal)
         // ボタンのフォントサイズ
         button4.titleLabel?.font =  UIFont.systemFont(ofSize: 18)
         // 背景色
@@ -136,8 +136,8 @@ class FoodViewController: UIViewController {
         // ボタン5のインスタンス生成
         let button5 = UIButton()
         // ボタンの位置とサイズを設定
-        button5.frame = CGRect(x:screenWidth/9, y:screenHeight/2,
-                               width:screenWidth/0.8, height:60)
+        button5.frame = CGRect(x:screenWidth/9, y:screenHeight/3,
+                               width:screenWidth/1.2, height:60)
         // ボタンのタイトルを設定
         button5.setTitle("三重県　すし久のてこね寿司", for:UIControl.State.normal)
         // タイトルの色
