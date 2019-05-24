@@ -19,24 +19,25 @@ class StationViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
-    var result:[String] = ["草津駅", "難波駅", "三条駅", "和歌山市駅","伊勢市駅"]
+    var result:[String] = ["草津", "JR難波", "三条","和歌山市","伊勢市","新大阪","天王寺","京橋","大阪城公園","大阪城公園","ユニバーサルシティ","本町","山科","出町柳","丹波橋","福知山","嵐山","長岡京","橿原神宮前","天理","西ノ京","大和小泉","吉野口","米原","近江八幡","近江舞子","志賀","尼崎","三ノ宮","宝塚","伊丹","有馬温泉","住吉","須磨","灘"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //0-4の間でランダムに数字を表示させる
-        let number = Int.random(in: 0..<4)
+        let number = Int.random(in: 0..<35)
         
         //背景の画像を4枚追加する
-        ViewArray = [UIImage(named:"siro.png")!,
-                       UIImage(named:"img_main.jpg")!,
-                       UIImage(named:"1.jpg")!,
-                       UIImage(named:"image12.jpg")!]
+//        ViewArray = [UIImage(named:"siro.png")!,
+//                       UIImage(named:"img_main.jpg")!,
+//                       UIImage(named:"1.jpg")!,
+//                       UIImage(named:"image12.jpg")!]
+//
+//        Viewimageview.image = ViewArray[number]
         
-        Viewimageview.image = ViewArray[number]
-        
-        let num = Int(arc4random_uniform(5))
-        nameLabel.text = "\(result[num])へ行ってください！"
+        let num = Int(arc4random_uniform(35))
+        nameLabel.text = "\(result[num])駅へ行ってください！"
         
         
         // Do any additional setup after loading the view.
@@ -55,3 +56,4 @@ class StationViewController: UIViewController {
     */
 
 }
+//var result:[String] = ["草津", "JR難波", "三条","和歌山市","伊勢市","新大阪","天王寺","京橋","大阪城公園","大阪城公園","ユニバーサルシティ","本町","山科","出町柳","丹波橋","福知山","嵐山","長岡京","橿原神宮前","天理","西ノ京","大和小泉","吉野口","米原","近江八幡","近江舞子","志賀","尼崎","三ノ宮","宝塚","伊丹","有馬温泉","住吉","須磨","灘"]

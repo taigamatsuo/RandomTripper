@@ -17,6 +17,7 @@
 		6605FC1722914DB30096E4F8 /* siro.png in Resources */ = {isa = PBXBuildFile; fileRef = 6605FC1622914DB30096E4F8 /* siro.png */; };
 		660C427B2294ED4D00FBCBC9 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 660C427A2294ED4D00FBCBC9 /* food.png */; };
 		66105E252297F00D005719BF /* human.png in Resources */ = {isa = PBXBuildFile; fileRef = 66105E242297F00D005719BF /* human.png */; };
+		66105E27229841FB005719BF /* 金ボタン.png in Resources */ = {isa = PBXBuildFile; fileRef = 66105E26229841FA005719BF /* 金ボタン.png */; };
 		6676EAF7228558370012FD6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676EAF6228558370012FD6D /* AppDelegate.swift */; };
 		6676EAF9228558370012FD6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6676EAF8228558370012FD6D /* ViewController.swift */; };
 		6676EAFC228558370012FD6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6676EAFA228558370012FD6D /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		6605FC1622914DB30096E4F8 /* siro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = siro.png; sourceTree = "<group>"; };
 		660C427A2294ED4D00FBCBC9 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
 		66105E242297F00D005719BF /* human.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = human.png; sourceTree = "<group>"; };
+		66105E26229841FA005719BF /* 金ボタン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "金ボタン.png"; sourceTree = "<group>"; };
 		6676EAF3228558370012FD6D /* RandomTripper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomTripper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6676EAF6228558370012FD6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6676EAF8228558370012FD6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				6605FC1622914DB30096E4F8 /* siro.png */,
 				660C427A2294ED4D00FBCBC9 /* food.png */,
 				66105E242297F00D005719BF /* human.png */,
+				66105E26229841FA005719BF /* 金ボタン.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +209,7 @@
 				6605FC0B22914B440096E4F8 /* tizuhaikei.png in Resources */,
 				6676EAFC228558370012FD6D /* Main.storyboard in Resources */,
 				660C427B2294ED4D00FBCBC9 /* food.png in Resources */,
+				66105E27229841FB005719BF /* 金ボタン.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
